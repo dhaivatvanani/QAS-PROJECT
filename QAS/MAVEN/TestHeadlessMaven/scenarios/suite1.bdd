@@ -1,0 +1,13 @@
+
+
+SCENARIO: Test1auto
+META-DATA: {"description":"Sample Test Scenario","testEntityKey":"RT-TC-1"}
+
+	Given get 'http://www.google.co.in'
+	Then verify 'name=a' is present
+	When sendKeys 'QMetry' into 'name=q'
+	Then verify link with partial text 'QMetry application 1234'
+	
+	
+END
+
